@@ -1,8 +1,8 @@
-# Advent of Code 2020 with Typescript
+# Advent of Code 2024 with Typescript
 
 ## Introduction
 
-This repository contains my solutions to problems in [Advent of Code 2020](https://adventofcode.com/2020), programmed with Typescript and TS-Node.
+This repository contains my solutions to problems in [Advent of Code 2024](https://adventofcode.com/2024), programmed with Typescript and TS-Node.
 
 The repository can also be used as a base for your own solutions. This gives you a ready development environment with following advantages:
 * Typescript/Node configured for quick development
@@ -14,7 +14,7 @@ The repository can also be used as a base for your own solutions. This gives you
 
 To clone and use the repository, following software must be installed on your computer:
 * Git
-* Node, v12 or up
+* Node, v20 or up
 
 ## Executing my solutions
 
@@ -23,11 +23,11 @@ Here's how to execute the solutions.
 Instructions:
 1. Clone the repository
 ```
-git clone https://github.com/jvuor/advent-of-code-2020.git
+git clone https://github.com/jvuor/advent-of-code-2024.git
 ```
 2. Install dependancies
 ```
-cd advent-of-code-2020
+cd advent-of-code-2024
 npm i
 ```
 3. Each days solution has it's own starting script, so as an example to run the solution for day 1:
@@ -45,11 +45,11 @@ Here are instructions to using the repository as a base for developing your own 
 
 1. Clone the repository
 ```
-git clone https://github.com/jvuor/advent-of-code-2020.git
+git clone https://github.com/jvuor/advent-of-code-2024.git
 ```
 2. Install dependancies
 ```
-cd advent-of-code-2020
+cd advent-of-code-2024
 npm i
 ```
 3. Remove the existing solutions and re-initialize the git repo
@@ -60,9 +60,7 @@ git init
 ```
 4. For initializing each solution, use the `add` script. For example, `npm run add day1` adds a directory for new solution to `src/day1` and a script to run the solution: `npm run day1`
 
-5. For handling the solution inputs, save them as `input.txt` inside the solution directory and use the included `getInput` function to retrieve the contents of the file. As an example if you save the input for day 1 as `src/day1/input.txt` you can then call `getInput()` without arguments inside `src/day1/index.ts` and it finds the input file automatically.
-
-   If your input file has a different file name or it is located in a different directory, provide a path to it as an argument to `getInput`. For example `getInput('src/day1/input.txt')`.
+5. For handling the solution inputs, get your session token from Advent of Code website cookie, and save it as `session.txt` inside `src/utils/`. Then you can use `getInput` function to get the input data via http. Inputs are cached locally so they are only fetched once.
 
 6. The repository comes with TSList configured for use. If you are using Visual Studio Code, you should install the TSLint extension and it will use the configuration for linting. If you want to modify the configuration to your own tastes, see `tslint.json`.
 
