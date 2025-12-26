@@ -7,7 +7,8 @@
   "scripts": {
     "add": "tsx src/index.ts",
     "test": "jest --config ./jest.config.cjs",
-    "day1": "tsx src/day1/index.ts"
+    "day1": "tsx src/day1/index.ts",
+    "day2": "tsx src/day2/index.ts"
   },
   "author": "",
   "license": "ISC",
